@@ -1,10 +1,85 @@
-html, body {
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	margin: 350px auto;
+	text-align: center;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 400px;
+	height: 450px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+body{
+	background: url('images/decor5.png') ;
+}
+#
+.birthday_header{
+	margin: 0 auto;
+}
+.birthday_decor_ballons{
+	text-align: left;
+
+}
+.carousel{
+    width: 600px;
+    margin: 0 auto;
+}  
+.carousel_img{
+	width:460px; 
+	height:345px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+}
+#text-carousel{
+	background-color: #ccc;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.card{
+	background-color: #F58942;
+	color: #6E4D34;
+}
+/*html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
 body{
-	/*background-image: url(images/background-image.jpg); */
+	/*background-image: url(images/background-image.jpg);  commented out
 	display: -moz-box;
 	display: -webkit-box;
 	display: box;
@@ -63,9 +138,9 @@ body{
 	-moz-transition:all .5s ease-in;
 	transition:all .5s ease-in;
 } 
-/* displays the welcome_text first */
+/*displays the welcome_text first comment
 .birthday_cardbox > div:first-child {
-	/*position: relative; */
+	/*position: relative; commented out
 	z-index: 2;
 
 }
@@ -85,7 +160,9 @@ body{
 #wishes_text {
 	font-size: 20px;
 }
+
+
 footer{
 	padding: 10px;
 	text-align: center; 
-}
+} */

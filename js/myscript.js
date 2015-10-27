@@ -1,3 +1,11 @@
+$(document).ready(function(){
+	$("#main_birthday_page").hide();
+
+	$('.flip-container'). fadeOut('slow');
+
+	$('#main_birthday_page').fadeIn('fast');
+})
+
 /*$(document).ready(function(){
 	
 	$("#wishes_text"). hide();

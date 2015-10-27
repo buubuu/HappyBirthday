@@ -1,0 +1,33 @@
+body{
+	background: url('images/decor5.png') ;
+}
+.birthday_header{
+	text-align: center;
+}
+
+.birthday_cake{
+	text-align: center;
+	margin: 25%;
+	opacity: .5;
+}
+
+.birthday_decor_ballons{
+	text-align: left;
+
+}
+.carousel{
+    width: 600px;
+    margin: 0 auto;
+}  
+.carousel_img{
+	width:460px; 
+	height:345px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+}
+#text-carousel{
+	background-color: #ccc;
+}
